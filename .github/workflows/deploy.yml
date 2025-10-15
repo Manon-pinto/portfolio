@@ -31,10 +31,12 @@ jobs:
       - name: Installation des dépendances
         run: npm ci
 
+ # Étape 3.1 : Linter le code et bloquer la pipeline si le lint échoue
       - name: Vérification du lint
-        run: npm run lint:check 
+        run: npm run lint:check
 
-      - name: Verification du formatage 
+      # Étape 3.2 : Vérifier le formattage du code et bloquer la pipeline si le formattage est incorrect
+      - name: Vérification formattage
         run: npm run format:check
 
       - name: Construction l'application pour la production

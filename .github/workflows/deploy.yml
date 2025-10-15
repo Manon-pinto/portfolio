@@ -40,4 +40,4 @@ jobs:
         - name: Upload des fichiers
           uses: actions/upload-pages-artifact@v3
           with:
-            pasth: "./dist"
+            path: "./dist"

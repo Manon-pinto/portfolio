@@ -1,4 +1,4 @@
-name: deploiement-gh-pages
+name: Déploiement GitHub Pages
 on: 
   push:
     branches:
@@ -37,7 +37,7 @@ jobs:
         - name: Déploiement vers GitHub Pages
           uses: actions/configure-pages@v4
 
-          name: Upload des fichiers
+        - name: Upload des fichiers
           uses: actions/upload-pages-artifact@v3
           with:
             pasth: "./dist"

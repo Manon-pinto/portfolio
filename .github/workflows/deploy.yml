@@ -42,17 +42,17 @@ jobs:
           with:
             path: "./dist"
 
-
-    deploy:
-      name: Déploiement
-      needs: build
-      runs-on: ubuntu-latest
-
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-
-      steps:
-        - name: Déploiement vers GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+  deploy:
+    name: Déploiement
+    # Ce job attend que le build soit terminé
+    needs: build
+    runs-on: ubuntu-latest
+    # Configuration spécifique pour GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Déployer sur GitHub Pages
+      - name: Déploiement sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

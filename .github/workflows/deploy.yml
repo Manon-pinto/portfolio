@@ -31,6 +31,12 @@ jobs:
       - name: Installation des dépendances
         run: npm ci
 
+      - name: Vérification du lint
+        run: npm run lint:check 
+
+      - name : Verification du formatage 
+        run: npm run format:check
+
       - name: Construction l'application pour la production
         run: npm run build
 

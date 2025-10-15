@@ -1,7 +1,7 @@
 <script setup>
 defineOptions({
-  name: 'AppNavbar'
-})
+  name: "AppNavbar",
+});
 </script>
 
 <template>

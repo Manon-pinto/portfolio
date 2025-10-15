@@ -3,7 +3,6 @@ import pluginVue from "eslint-plugin-vue";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
-  
   // Global ignores
   {
     ignores: ["**/node_modules/**", "**/dist/**", "**/build/**"],
@@ -42,6 +41,4 @@ export default [
       // 'vue/no-unused-vars': 'error'
     },
   },
-
-
 ];

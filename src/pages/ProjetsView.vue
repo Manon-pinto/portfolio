@@ -247,7 +247,6 @@ onMounted(() => {
 
   setInterval(createParticle, 500);
 });
-
 </script>
 
 <style>

@@ -1,24 +1,28 @@
-<script setup></script>
+<script setup>
+defineOptions({
+  name: 'AppNavbar'
+})
+</script>
 
 <template>
   <nav>
     <ul>
       <li><router-link to="/" aria-label="Accueil">Accueil</router-link></li>
       <li>
-        <router-link to="/me" aria-label="Présentation"
-          >Présentation</router-link
-        >
+        <router-link to="/me" aria-label="Présentation">
+          Présentation
+        </router-link>
       </li>
       <li><router-link to="/projets">Mes projets</router-link></li>
       <li>
         <router-link to="/technique" aria-label="Competentes Techniques">
-          Compétences technique</router-link
-        >
+          Compétences technique
+        </router-link>
       </li>
       <li>
-        <router-link to="/competences" aria-label="Mes compétences"
-          >Mes compétences</router-link
-        >
+        <router-link to="/competences" aria-label="Mes compétences">
+          Mes compétences
+        </router-link>
       </li>
       <li>
         <router-link to="/veille" aria-label="Ma veille">Ma veille</router-link>

@@ -230,6 +230,7 @@
 </template>
 
 <script setup>
+/* global setTimeout, setInterval */
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -243,11 +244,13 @@ onMounted(() => {
       particle.remove();
     }, 15000);
   }
+
   setInterval(createParticle, 500);
 });
+
 </script>
 
-<style scoped>
+<style>
 body {
   margin: 0;
   padding: 0;

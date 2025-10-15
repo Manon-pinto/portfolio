@@ -62,9 +62,8 @@
           <img src="../assets/images/veille2.png" alt="Projet 4" />
           <h3>4 idées reçues sur les sites web</h3>
           <p>
-            Contrairement aux idées reçues, un site web ne génère pas de
-            clients sans SEO ou pub. Il doit être ergonomique, bien structuré
-            et utile.
+            Contrairement aux idées reçues, un site web ne génère pas de clients
+            sans SEO ou pub. Il doit être ergonomique, bien structuré et utile.
           </p>
           <a
             href="https://www.tricorn.fr/2023/01/24/4-idees-recues-sur-les-sites-web/"
@@ -116,278 +115,338 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const carousel = ref(null)
-let currentIndex = 0
+const carousel = ref(null);
+let currentIndex = 0;
 
 const moveSlide = (direction) => {
-  const items = carousel.value.children
-  const totalItems = items.length
+  const items = carousel.value.children;
+  const totalItems = items.length;
 
   // Retire la classe active de l'actuel
-  items[currentIndex].classList.remove('active')
+  items[currentIndex].classList.remove("active");
 
   // Calcule l'index suivant
-  currentIndex = (currentIndex + direction + totalItems) % totalItems
+  currentIndex = (currentIndex + direction + totalItems) % totalItems;
 
   // Ajoute la classe active au nouveau
-  items[currentIndex].classList.add('active')
+  items[currentIndex].classList.add("active");
 
   // Translate la slide
-  carousel.value.style.transform = `translateX(-${currentIndex * 100}%)`
-}
+  carousel.value.style.transform = `translateX(-${currentIndex * 100}%)`;
+};
 </script>
 
 <style scoped>
- body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f8e7e8;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: linear-gradient(45deg, #f8e7e8, #ffe6e9);
-            background-size: 200% 200%;
-            animation: gradientBG 8s ease infinite;
-        }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f8e7e8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #f8e7e8, #ffe6e9);
+  background-size: 200% 200%;
+  animation: gradientBG 8s ease infinite;
+}
 
-        header {
-            width: 100%;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-        }
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
 
-        .hero {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #fff;
-            padding: 0 20px;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 0 20px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            color: #ff6f91;
-            animation: glowText 2s ease-in-out infinite alternate;
-            position: relative;
-        }
+.hero h1 {
+  font-size: 3.5rem;
+  color: #ff6f91;
+  animation: glowText 2s ease-in-out infinite alternate;
+  position: relative;
+}
 
-        .hero h1 span {
-            display: inline-block;
-            animation: floating 0.3s ease infinite;
-        }
+.hero h1 span {
+  display: inline-block;
+  animation: floating 0.3s ease infinite;
+}
 
-        .hero p {
-            font-size: 1.5rem;
-            color: #333;
-            max-width: 700px;
-            margin: 20px 0;
-            line-height: 1.6;
-            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid #ff6f91;
-        }
+.hero p {
+  font-size: 1.5rem;
+  color: #333;
+  max-width: 700px;
+  margin: 20px 0;
+  line-height: 1.6;
+  animation:
+    typing 4s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff6f91;
+}
 
-        .hero a {
-            background-color: #ff6f91;
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: background-color 0.2s ease;
-        }
+.hero a {
+  background-color: #ff6f91;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+}
 
-        .hero a:hover {
-            background-color: #d96073;
-        }
+.hero a:hover {
+  background-color: #d96073;
+}
 
-        .presentation, .about {
-            background-color: #fff;
-            padding: 50px 20px;
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-        }
+.presentation,
+.about {
+  background-color: #fff;
+  padding: 50px 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
 
-        .presentation h2, .about h2 {
-            font-size: 2.5rem;
-            color: #ff6f91;
-            margin-bottom: 30px;
-        }
+.presentation h2,
+.about h2 {
+  font-size: 2.5rem;
+  color: #ff6f91;
+  margin-bottom: 30px;
+}
 
-        .presentation p, .about p {
-            font-size: 1.2rem;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+.presentation p,
+.about p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-        .card-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-            flex-wrap: wrap;
-        }
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
 
-        .card {
-            background-color: #fff;
-            width: 300px;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            perspective: 1000px;
-        }
+.card {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
 
-        .card:hover {
-            transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
-            transform-style: preserve-3d;
-        }
+.card:hover {
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  transform-style: preserve-3d;
+}
 
-        .card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: pulse 2s ease-in-out infinite;
-        }
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+}
 
-        footer {
-            background-color: #fff;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-        }
+footer {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        footer p {
-            color: #333;
-        }
+footer p {
+  color: #333;
+}
 
-        /* Animations */
-        @keyframes glowText {
-            from { text-shadow: 0 0 10px rgba(255, 111, 145, 0); }
-            to { text-shadow: 0 0 20px rgba(255, 111, 145, 0.5), 0 0 30px rgba(255, 111, 145, 0.3); }
-        }
+/* Animations */
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px rgba(255, 111, 145, 0);
+  }
+  to {
+    text-shadow:
+      0 0 20px rgba(255, 111, 145, 0.5),
+      0 0 30px rgba(255, 111, 145, 0.3);
+  }
+}
 
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
-        @keyframes typing { from { width: 0; } to { width: 100%; } }
-        @keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: #ff6f91; } }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff6f91;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-        @media (max-width: 400px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p, .presentation p, .about p { font-size: 1rem; }
-            .card { width: 90%; }
-        }
-        .carousel-section {
-    text-align: center;
-    background-color: #f8e7e8;
-    padding: 50px 20px;
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p,
+  .presentation p,
+  .about p {
+    font-size: 1rem;
+  }
+  .card {
+    width: 90%;
+  }
+}
+.carousel-section {
+  text-align: center;
+  background-color: #f8e7e8;
+  padding: 50px 20px;
 }
 
 .carousel-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .carousel-link {
-    background-color: #ff6f91;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  background-color: #ff6f91;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .carousel-link:hover {
-    background-color: #d96073;
+  background-color: #d96073;
 }
 
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .carousel-button:hover {
-    background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 </style>

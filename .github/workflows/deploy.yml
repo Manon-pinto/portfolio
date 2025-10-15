@@ -1,5 +1,5 @@
 name: Déploiement GitHub Pages
-on: 
+on:
   push:
     branches:
       - master
@@ -11,36 +11,36 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
   build:
-    name: Construction 
+    name: Construction
     runs-on: ubuntu-latest
     steps:
-        - name: Récuperation du code
-          uses: actions/checkout@v4
+      - name: Récuperation du code
+        uses: actions/checkout@v4
 
-        - name: Installation de Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: '20'
-            cache: 'npm'
+      - name: Installation de Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-        - name: Installation des dépendances
-          run: npm ci 
+      - name: Installation des dépendances
+        run: npm ci
 
-        - name: Construction l'application pour la production
-          run: npm run build
+      - name: Construction l'application pour la production
+        run: npm run build
 
-        - name: Déploiement vers GitHub Pages
-          uses: actions/configure-pages@v4
+      - name: Déploiement vers GitHub Pages
+        uses: actions/configure-pages@v4
 
-        - name: Upload des fichiers
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: "./dist"
+      - name: Upload des fichiers
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./dist"
 
   deploy:
     name: Déploiement

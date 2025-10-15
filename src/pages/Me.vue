@@ -3,49 +3,73 @@
     <h1>Présentation</h1>
     <div class="button-container">
       <button @click="showSection('moi-section')">À propos de moi</button>
-      <button @click="showSection('entreprise-section')">À propos de RPI Menuiserie</button>
+      <button @click="showSection('entreprise-section')">
+        À propos de RPI Menuiserie
+      </button>
     </div>
   </div>
 
   <!-- Section À propos de moi -->
-  <div id="moi-section" class="sections" :class="{ active: activeSection === 'moi-section' }">
+  <div
+    id="moi-section"
+    class="sections"
+    :class="{ active: activeSection === 'moi-section' }"
+  >
     <!-- Parcours scolaire -->
     <div class="section" id="parcours">
       <h2>Mon Parcours Scolaire</h2>
-      <p>Voici un aperçu de mon parcours scolaire et des étapes clés de ma formation.</p>
+      <p>
+        Voici un aperçu de mon parcours scolaire et des étapes clés de ma
+        formation.
+      </p>
 
-<div class="timeline-wrapper">
-  <ul class="timeline">
-    <li>
-      <div class="date">2019 - 2022</div>
-      <div class="desc">
-        Bac professionnel en optique lunetterie – <strong>Admise mention bien</strong><br />
-        • 2021 : Formation technico-commerciale chez Atol Paris<br />
-        • 2021 : Médaille d'argent au concours du Meilleur Apprenti de France<br />
-        • 2022 : Médaille de bronze au concours du Meilleur Apprenti de France
+      <div class="timeline-wrapper">
+        <ul class="timeline">
+          <li>
+            <div class="date">2019 - 2022</div>
+            <div class="desc">
+              Bac professionnel en optique lunetterie –
+              <strong>Admise mention bien</strong><br />
+              • 2021 : Formation technico-commerciale chez Atol Paris<br />
+              • 2021 : Médaille d'argent au concours du Meilleur Apprenti de
+              France<br />
+              • 2022 : Médaille de bronze au concours du Meilleur Apprenti de
+              France
+            </div>
+          </li>
+          <li>
+            <div class="date">2023 - 2025</div>
+            <div class="desc">
+              BTS SIO – Option SLAM au Campus Ermiage– <strong>Admise</strong>
+            </div>
+          </li>
+          <li>
+            <div class="date">2025 - 2026</div>
+            <div class="desc">
+              Bachelor Développeur Web à MyDigitalSchool–
+              <strong>En Cour</strong>
+            </div>
+          </li>
+        </ul>
       </div>
-    </li>
-    <li>
-      <div class="date">2023 - 2025</div>
-      <div class="desc">BTS SIO – Option SLAM au Campus Ermiage– <strong>Admise</strong></div>
-    </li>
-    <li>
-      <div class="date">2025 - 2026</div>
-      <div class="desc">Bachelor Développeur Web à MyDigitalSchool– <strong>En Cour</strong></div>
-    </li>
-  </ul>
-</div>
     </div>
 
     <!-- CV -->
     <div class="section" id="cv">
       <h2>Mon CV</h2>
-      <p>Découvrez mon parcours professionnel et mes compétences. Vous pouvez télécharger mon CV complet ou le consulter ci-dessous.</p>
+      <p>
+        Découvrez mon parcours professionnel et mes compétences. Vous pouvez
+        télécharger mon CV complet ou le consulter ci-dessous.
+      </p>
 
       <div class="cv-content">
         <div class="cv-preview">
           <a href="../assets/images/cvmanonpinto_filigrane.pdf" target="_blank">
-            <img src="../assets/images/cv.png" alt="Aperçu de mon CV" class="cv-img" />
+            <img
+              src="../assets/images/cv.png"
+              alt="Aperçu de mon CV"
+              class="cv-img"
+            />
           </a>
         </div>
         <div class="cv-actions">
@@ -56,33 +80,44 @@
       </div>
     </div>
   </div>
-<!-- Section RPI Menuiserie -->
-<div id="entreprise-section" class="sections" :class="{ active: activeSection === 'entreprise-section' }">
-  <div class="section entreprise">
-    <h2 class="section-title"> RPI Menuiserie : Artisanat & Innovation</h2>
-    
-    <div class="entreprise-content">
-      <p>
-        <strong>RPI Menuiserie</strong> est une entreprise dynamique implantée en <strong>Nouvelle-Aquitaine</strong>, spécialisée dans la <em>fabrication,</em> de menuiseries intérieures et extérieures.
-      </p>
+  <!-- Section RPI Menuiserie -->
+  <div
+    id="entreprise-section"
+    class="sections"
+    :class="{ active: activeSection === 'entreprise-section' }"
+  >
+    <div class="section entreprise">
+      <h2 class="section-title">RPI Menuiserie : Artisanat & Innovation</h2>
 
-      <p>
-        Elle accompagne aussi bien les <strong>particuliers</strong> que les <strong>professionnels</strong> dans leurs projets sur mesure : 
-        <span class="services">fenêtres, portes, volets</span>, etc.
-      </p>
+      <div class="entreprise-content">
+        <p>
+          <strong>RPI Menuiserie</strong> est une entreprise dynamique implantée
+          en <strong>Nouvelle-Aquitaine</strong>, spécialisée dans la
+          <em>fabrication,</em> de menuiseries intérieures et extérieures.
+        </p>
 
-      <p>
-        Reconnue pour son <strong>savoir-faire, la qualité de ses matériaux </strong>, RPI Menuiserie allie avec justesse <em>tradition</em> et <em>innovation</em>.
-      </p>
+        <p>
+          Elle accompagne aussi bien les <strong>particuliers</strong> que les
+          <strong>professionnels</strong> dans leurs projets sur mesure :
+          <span class="services">fenêtres, portes, volets</span>, etc.
+        </p>
 
-      <p>
-        Grâce à une équipe expérimentée et passionnée, l’entreprise propose des <strong>prestations personnalisées</strong>, adaptées à chaque besoin, avec une attention particulière portée aux finitions.
-      </p>
+        <p>
+          Reconnue pour son
+          <strong>savoir-faire, la qualité de ses matériaux </strong>, RPI
+          Menuiserie allie avec justesse <em>tradition</em> et
+          <em>innovation</em>.
+        </p>
+
+        <p>
+          Grâce à une équipe expérimentée et passionnée, l’entreprise propose
+          des <strong>prestations personnalisées</strong>, adaptées à chaque
+          besoin, avec une attention particulière portée aux finitions.
+        </p>
+      </div>
     </div>
   </div>
-</div>
 </template>
-
 
 <script setup>
 import { ref } from "vue";
@@ -209,7 +244,7 @@ body {
 }
 
 .timeline li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   left: -11px;
@@ -306,7 +341,6 @@ body {
   cursor: pointer;
 }
 
-
 .entreprise .section-title {
   font-size: 2.5rem;
   color: #ff6f91;
@@ -316,7 +350,7 @@ body {
 }
 
 .entreprise .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -355,7 +389,6 @@ body {
   color: #d96073;
 }
 
-
 /* Animations */
 @keyframes gradientBG {
   0% {
@@ -371,10 +404,14 @@ body {
 
 @keyframes glowText {
   0% {
-    text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff6f91;
+    text-shadow:
+      0 0 10px #ff6f91,
+      0 0 20px #ff6f91;
   }
   100% {
-    text-shadow: 0 0 20px #ff6f91, 0 0 30px #ff6f91;
+    text-shadow:
+      0 0 20px #ff6f91,
+      0 0 30px #ff6f91;
   }
 }
 </style>

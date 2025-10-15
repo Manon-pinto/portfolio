@@ -1,10 +1,10 @@
 <template>
-  <section class="hero" id="accueil">
+  <section id="accueil" class="hero">
     <h1>Bienvenue sur mon Portfolio</h1>
     <p>Je suis PINTO Manon, apprentie en Bachelor 3 Dévelloppeur web</p>
   </section>
 
-  <section class="presentation" id="presentation">
+  <section id="presentation" class="presentation">
     <h2>Découvrir le Bchelor 3 Dévelloppeur web</h2>
     <p>###############</p>
     <div class="card-container">
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section class="about" id="about">
+  <section id="about" class="about">
     <h2>À propos de moi</h2>
     <p>
       Je suis actuellement en BTS SIO SLAM et pour me former j'ai fréquenté le

@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" id="accueil">
+  <section id="accueil" class="hero">
     <h1>Fiches de compétences technique</h1>
   </section>
 

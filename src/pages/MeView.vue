@@ -16,7 +16,7 @@
     :class="{ active: activeSection === 'moi-section' }"
   >
     <!-- Parcours scolaire -->
-    <div class="section" id="parcours">
+    <div id="parcours" class="section">
       <h2>Mon Parcours Scolaire</h2>
       <p>
         Voici un aperçu de mon parcours scolaire et des étapes clés de ma
@@ -55,7 +55,7 @@
     </div>
 
     <!-- CV -->
-    <div class="section" id="cv">
+    <div id="cv" class="section">
       <h2>Mon CV</h2>
       <p>
         Découvrez mon parcours professionnel et mes compétences. Vous pouvez

@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" id="contact">
+  <section id="contact" class="hero">
     <h1>Contact</h1>
     <p>Si vous avez la moindre question, vous pouvez me contacter ici.</p>
   </section>
@@ -7,10 +7,10 @@
   <section class="contact-section">
     <form class="contact-form" action="contact.php" method="POST">
       <label for="name">Nom</label>
-      <input type="text" id="name" name="name" required />
+      <input id="name" type="text" name="name" required />
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+      <input id="email" type="email" name="email" required />
 
       <label for="message">Message</label>
       <textarea id="message" name="message" required></textarea>

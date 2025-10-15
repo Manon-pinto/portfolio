@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" id="accueil">
+  <section id="accueil" class="hero">
     <h1>Ma veille</h1>
     <p>Voici les articles que j'ai consultés</p>
     <p>pour constituer ma veille technologique</p>
@@ -8,7 +8,7 @@
   <section class="carousel-section">
     <h2>Mes Articles De Veille</h2>
     <div class="carousel-container">
-      <div class="carousel" ref="carousel">
+      <div ref="carousel" class="carousel">
         <div class="carousel-item active">
           <img src="../assets/images/veille.png" alt="Projet 1" />
           <h3>Conseils pour développeur junior</h3>
